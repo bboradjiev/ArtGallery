@@ -1,0 +1,46 @@
+.gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  grid-gap: 1px 1em;
+  grid-auto-rows: 10px;
+  padding: 15px 15px;
+  justify-content: center;
+
+  .image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+  }
+
+  .container {
+    position: relative;
+    h3 {
+      color: $main-white-color;
+      font-size: 24px;
+    }
+    p {
+      padding-top: 5px;
+      color: $main-middle-gray-color;
+    }
+
+    .information {
+      position: absolute;
+      bottom: 66px;
+      left: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

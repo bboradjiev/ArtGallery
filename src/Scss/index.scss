@@ -1,2 +1,18 @@
-body{
- }
+@import "./app";
+@import "./header";
+@import "./gallery";
+@import "./variables";
+@import "./card";
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Libre Baskerville", serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

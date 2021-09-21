@@ -1,0 +1,30 @@
+@import "./variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 99%;
+  padding: 17px 15px;
+  border-bottom: 1px solid $main-middle-gray-color;
+  h1 {
+    font-size: clamp(1.875rem, calc(1.4723rem + 2.3009vw), 3.5rem);
+    font-weight: 700;
+  }
+  a {
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+     color: $main-gray-color;
+    text-shadow: 3px 3px $main-middle-gray-color;
+    p {
+      font-size: clamp(0.563rem, calc(0.5603rem + 0.2153vw), 0.75rem);
+    }
+  }
+  a:hover {
+    color: $main-black-color;
+  }
+}
