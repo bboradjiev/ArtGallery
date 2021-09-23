@@ -15,7 +15,7 @@ function App() {
           <Route exact path="/">
             <Gallery data={data} />
           </Route>
-          <Route path="/image/:id" component={Card}  />
+          <Route path="/image/:id" component={Card}/>
         </Switch>
       </BrowserRouter>
     </div>

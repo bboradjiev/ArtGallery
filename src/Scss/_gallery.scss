@@ -33,14 +33,4 @@
   }
 }
 
-@media screen and (max-width: 800px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media screen and (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}

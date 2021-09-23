@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -6,22 +7,66 @@
   padding-top: 90px;
   padding-bottom: 90px;
   padding-left: 10px;
-  position: relative;
+  margin-bottom: 151px;
 
+  .card_left {
+    max-width: 650px;
+  }
   .card_information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
     position: absolute;
-    background-color: $main-white-color;
+    background-color: transparent;
     z-index: 1;
     color: $main-black-color;
-    font-size: clamp(1rem, calc(1.4784rem + 1.7266vw), 3rem);
-    line-height: 80px;
+    font-size: clamp(1rem, calc(1.4784rem + 1.7266vw), 2rem);
+    line-height: 60px;
     width: 100%;
-    padding: 0 20px;
-    padding-bottom: 40px;
-    max-width: 417px;
-    max-height: 491px;
-    left: 30%;
-    top: 13.1%;
+    max-width: 360px;
+    max-height: 240px;
+    left: 26%;
+    top: 12.1%;
+
+    .painting_artist {
+      position: absolute;
+      bottom: -143%;
+      width: 100%;
+      max-width: 140px;
+      max-height: auto;
+      padding-left: 26px;
+    }
+    .container {
+      padding: 0px 0px 50px 50px;
+      background-color: $main-white-color;
+    }
+  }
+
+  .open_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $main-white-color;
+    background-color: $main-black-color;
+    font-size: 80%;
+    width: 120px;
+    height: 5%;
+    opacity: 0.5;
+    text-align: center;
+    position: absolute;
+    bottom: 14%;
+    left: 0;
+    cursor: pointer;
+    margin: 15px;
+    padding-right: 7px;
+
+    img {
+      padding: 7px;
+    }
+  }
+  .open_image:hover {
+    background-color: $main-gray-color;
   }
   p {
     font-size: 15px;
@@ -30,23 +75,18 @@
 
   .painting {
     width: 100%;
-    max-width: 417px;
-    max-height: 491px;
+    max-width: 475px;
+    height: auto;
     z-index: 0;
   }
 
-  .painting_artist {
-    width: 100%;
-    max-width: 140px;
-    max-height: auto;
-    padding-left: 26px;
-    position: absolute;
-    bottom: 6%;
-  }
-
   .card_right {
-    width: 31%;
-    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22%;
+    margin-right: 9%;
+    margin-top: -20px;
 
     .year {
       font-size: 180px;
@@ -54,7 +94,7 @@
     }
     .description {
       position: absolute;
-      top: 32%;
+      top: 24%;
       font-size: 12px;
       line-height: 28px;
       font-weight: bold;
@@ -62,9 +102,8 @@
       color: $main-gray-color;
     }
     a {
-      position: absolute;
-      bottom: 12%;
       font-size: 9px;
+      // width: 90px;
       color: $main-gray-color;
       cursor: pointer;
       text-decoration: none;
@@ -77,8 +116,11 @@
   align-content: center;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 2px solid $main-black-color;
   padding: 20px 0;
   .card_information {
+    display: flex;
+    flex-direction: column;
     h1 {
       font-size: 18px;
       margin-bottom: 5px;
@@ -89,7 +131,45 @@
   }
   .arrows {
     .left_arrow {
+      cursor: pointer;
       margin-right: 40px;
     }
+    .right_arrow {
+      cursor: pointer;
+    }
+  }
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(61, 60, 60, 0.75);
+
+  .modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .painting_modal {
+    max-width: 100%;
+    height: auto;
+    padding: 0 20px;
+  }
+  .close_modal {
+    padding-left: 55%;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 3px;
+    color: $main-white-color;
   }
 }

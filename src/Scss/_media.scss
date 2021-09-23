@@ -1,0 +1,53 @@
+@media screen and (max-width: 1025px) {
+  .card {
+    flex-direction: column;
+    padding-top: 38px;
+    .card_right {
+      margin-top: -52px;
+      max-height: 11%;
+      .description {
+        max-width: 650px;
+        padding-left: 15%;
+        top: 79%;
+       }
+      .year {
+        margin-left: 30px;
+        margin-top: -128px;
+      }
+      a{
+          width: 250px;
+        padding-top: 135px;
+        margin-left: 140px;
+      }
+    }
+    .card_left {
+      width: 70%;
+    }
+    .card_information {
+      top: 4%;
+      left: 40%;
+      .painting_artist {
+        bottom: -47%;
+      }
+    }
+    .open_image {
+      bottom: 32%;
+      width: 16%;
+    }
+    .painting {
+      max-width: 475px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
