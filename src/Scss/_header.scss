@@ -5,11 +5,11 @@
   justify-content: space-between;
   align-items: baseline;
   width: 99%;
-  padding: 0px 15px;
-  padding-bottom: 40px;
+  padding: 20px 15px;
+  margin-bottom: 20px;
   border-bottom: 1px solid $main-middle-gray-color;
   h1 {
-    font-size: clamp(1.875rem, calc(1.4723rem + 2.3009vw), 3.5rem);
+    font-size: clamp(1rem, calc(0.5378rem + 3.3613vw), 3.5rem);
     font-weight: 700;
   }
   a {

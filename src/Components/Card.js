@@ -18,11 +18,7 @@ function Card({match}) {
               <h1>{chosenImg.name}</h1>
               <p>{chosenImg.artist.name}</p>
             </div>
-            <img
-            className="painting_artist"
-            src={`../images${chosenImg.artist.image}`}
-            alt={chosenImg.name}
-          />
+            
           </div>
           {modal ? 
           <ReactModal isOpen={modal}  className="modal" >
@@ -40,18 +36,23 @@ function Card({match}) {
             className="painting"
             src={`../images${chosenImg.images.hero.large}`}
             alt={chosenImg.name}
-          />         
-          
+          />   
           <span className='open_image' onClick={()=>setModal(!modal)}>
             <img src="../images/assets/shared/icon-view-image.svg"
                 alt="left"/>View Image</span>
+            <img
+            className="painting_artist"
+            src={`../images${chosenImg.artist.image}`}
+            alt={chosenImg.name}
+          />
         </aside>
+        
         <aside className="card_right">
-          <div>
             <h1 className="year">{chosenImg.year}</h1>
+          <div className="card_right_info">
             <p className="description">{chosenImg.description}</p>
+            <a href={chosenImg.source}>GO TO SOURCE</a>
           </div>
-          <a href={chosenImg.source}>GO TO SOURCE</a>
         </aside>
       </div>
       <div className="slideshow">

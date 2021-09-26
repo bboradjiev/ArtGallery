@@ -1,53 +1,66 @@
-@media screen and (max-width: 1025px) {
+  @media screen and (min-width: 1200px)  {
+  .App{
+      .card{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 0px;
+        margin-bottom: 22%;
+        .card_left {
+          .container {
+            height: 30%;
+            padding: 0px 0 9px 52px;
+          }
+          .painting_artist {
+            top: 90%;
+            left: 104%;
+          }
+          .open_image{
+            top: 89%;
+          }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
   .card {
-    flex-direction: column;
-    padding-top: 38px;
-    .card_right {
-      margin-top: -52px;
-      max-height: 11%;
-      .description {
-        max-width: 650px;
-        padding-left: 15%;
-        top: 79%;
-       }
-      .year {
-        margin-left: 30px;
-        margin-top: -128px;
-      }
-      a{
-          width: 250px;
-        padding-top: 135px;
-        margin-left: 140px;
-      }
-    }
+    margin-left: -146px;
     .card_left {
-      width: 70%;
-    }
-    .card_information {
-      top: 4%;
-      left: 40%;
+      align-items: flex-start;
+      .container {
+        top: 0;
+        right: -47%;
+        height: 28%;
+        padding: 0 0 30px 68px;
+      }
       .painting_artist {
-        bottom: -47%;
+        top: 25%;
+        left: 120%;
+      }
+      .open_image {
+        top: 3%;
+        left: 4%;
       }
     }
-    .open_image {
-      bottom: 32%;
-      width: 16%;
-    }
-    .painting {
-      max-width: 475px;
+    .card_right {
+      align-items: flex-start;
+      .card_right_info {
+        margin-top: -113px;
+      }
+      .year {
+        font-size: 180px;
+        margin: 0;
+      }
     }
   }
 }
 
-@media screen and (max-width: 800px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .gallery {
-    grid-template-columns: 1fr;
+@media screen and (max-width: 450px) {
+  .card {
+    .card_left {
+      .painting_artist {
+        width: 80px;
+      }
+    }
   }
 }
