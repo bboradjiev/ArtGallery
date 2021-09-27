@@ -39,7 +39,7 @@
       }
       .open_image {
         top: 3%;
-        left: 4%;
+        left: 0%;
       }
     }
     .card_right {
@@ -51,6 +51,11 @@
         font-size: 180px;
         margin: 0;
       }
+    }
+  }
+  .slideshow{
+    .card_information{
+      max-width: 350px;
     }
   }
 }

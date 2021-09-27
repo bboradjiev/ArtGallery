@@ -16,7 +16,7 @@ function RenderList(props) {
 
   return (
     <div className="container" style={{ gridRowEnd: `span ${dynamicSpan}` }}>
-      <Link to={`/image/${props.name}`}>
+      <Link onClick={()=>props.setStart(!props.start)} to={`/image/${props.name}`}>
         <img
           ref={imgRef}
           className="image"

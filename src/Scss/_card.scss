@@ -107,6 +107,8 @@
     .card_information {
       display: flex;
       flex-direction: column;
+      max-width: 220px;
+
       h1 {
         font-size: 18px;
         margin-bottom: 5px;
