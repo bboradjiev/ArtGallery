@@ -13,7 +13,6 @@ function RenderList(props) {
     let spans = Math.ceil(height / 10);
     setDynamicSpan(spans);
   };
-
   return (
     <div className="container" style={{ gridRowEnd: `span ${dynamicSpan}` }}>
       <Link onClick={()=>props.setStart(!props.start)} to={`/image/${props.name}`}>

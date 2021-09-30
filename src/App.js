@@ -8,7 +8,7 @@ import "./Scss/index.scss";
 import data from "./data";
 
 function App() {
-  let [start, setStart] = useState(false);
+  let [start, setStart] = useState(!false);
 
   return (
     <div className="App">
